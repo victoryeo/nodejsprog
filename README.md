@@ -34,6 +34,16 @@ docker push victoryeo00/myprog:latest
 ## docker run command (without detached)
 docker run -u node -p 4002:4002  victoryeo00/myprog:latest
 
+## deploy and delete k8s 
+kubectl apply -f create-deployment.yaml
+kubectl delete deployment myprog
+kubectl delete svc myprog-service
+
+## deploy helm chart
+helm create <helmname>
+helm install <appname> <helmname>
+helm uninstall <appname>
+
 ## api key setting
 set in .env file or pass the api key to docker commmand
 docker run -u node --env API_KEY=12345 -p 4002:4002 victoryeo99/myprog:latest
