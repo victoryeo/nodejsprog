@@ -47,5 +47,7 @@ helm install <appname> <helmname>/
 helm uninstall <appname>
 ```
 ## api key setting
+```
 set in .env file or pass the api key to docker commmand
-docker run -u node --env API_KEY=12345 -p 4002:4002 victoryeo99/myprog:latest
+docker run -u node --env API_KEY=testkey -p 4002:4002 victoryeo00/myprog:latest
+```
