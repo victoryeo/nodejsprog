@@ -41,7 +41,7 @@ kubectl delete svc myprog-service
 
 ## deploy helm chart
 helm create <helmname>
-helm install <appname> <helmname>
+helm install <appname> <helmname>/
 helm uninstall <appname>
 
 ## api key setting
