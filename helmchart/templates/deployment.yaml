@@ -38,12 +38,13 @@ spec:
               protocol: TCP
           livenessProbe:
             httpGet:
-              path: /
+              path: /api/v1/healthz
               port: http
+            initialDelaySeconds: 3
           readinessProbe:
             httpGet:
-              path: /
-              port: http
+              path: /api/v1/healthz
+              port: {{ .Values.service.port }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
