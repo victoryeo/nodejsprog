@@ -39,12 +39,12 @@ spec:
           livenessProbe:
             httpGet:
               path: /api/v1/healthz
-              port: 4002
+              port: {{ .Values.service.port }}
             initialDelaySeconds: 4
           readinessProbe:
             httpGet:
               path: /api/v1/healthz
-              port: 4002
+              port: {{ .Values.service.port }}
             initialDelaySeconds: 4
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
