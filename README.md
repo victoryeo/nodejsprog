@@ -26,6 +26,8 @@ Clone `.env-sample` to `.env` and update value for following environment variabl
 
 ## curl command test
 curl -X GET http://localhost:4002/api/v1/healthz
+curl -X GET http://localhost:4002/api/v1/books
+curl -d '{"name":"buybook", "author": "", "title": "ben","pages": 10}' -X POST http://localhost:4002/api/v1/books -H 'Content-Type: application/json'
 
 ## docker build command
 docker build --progress=plain -t victoryeo00/myprog:latest .
