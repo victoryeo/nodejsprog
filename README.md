@@ -25,10 +25,11 @@ Clone `.env-sample` to `.env` and update value for following environment variabl
 | `PORT`               | 3000           | Application port name     |
 
 ## curl command test
-curl -X GET http://localhost:4002/api/v1/healthz
-curl -X GET http://localhost:4002/api/v1/books
-curl -d '{"name":"buybook", "author": "", "title": "ben","pages": 10}' -X POST http://localhost:4002/api/v1/books -H 'Content-Type: application/json'
-curl -X DELETE http://localhost:4002/api/v1/books/6406bd9794c5b4ed9f6f2048
+curl -X GET http://localhost:4002/api/v1/healthz  
+curl -X GET http://localhost:4002/api/v1/books  
+curl -d '{"name":"buybook", "author": "", "title": "ben","pages": 10}' -X POST http://localhost:4002/api/v1/books -H 'Content-Type: application/json'  
+curl -X DELETE http://localhost:4002/api/v1/books/6406bd9794c5b4ed9f6f2048  
+curl -d '{"name":"sellbook", "author": {"firstName":"alex", "lastName":"mopoko"},"title": "pen","pages": 10}' -X POST http://localhost:4002/api/v1/books -H 'Content-Type: application/json'  
 
 ## docker build command
 docker build --progress=plain -t victoryeo00/nodejsprog:latest .
