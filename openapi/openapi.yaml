@@ -1,7 +1,7 @@
 openapi: 3.0.2
 info:
-  title: myprog API
-  description: myprog API Service
+  title: nodejsprog API
+  description: nodejsprog API Service
   termsOfService: NA
   contact:
     email: victoryeo@gmail.com
@@ -15,8 +15,8 @@ externalDocs:
 servers:
   - url: /api/v1
 tags:
-  - name: myprog
-    description: APIs for myprog
+  - name: nodejsprog
+    description: APIs for nodejsprog
 paths:
   /healthz:
     get:

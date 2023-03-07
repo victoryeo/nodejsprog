@@ -31,17 +31,17 @@ curl -d '{"name":"buybook", "author": "", "title": "ben","pages": 10}' -X POST h
 curl -X DELETE http://localhost:4002/api/v1/books/6406bd9794c5b4ed9f6f2048
 
 ## docker build command
-docker build --progress=plain -t victoryeo00/myprog:latest .
+docker build --progress=plain -t victoryeo00/nodejsprog:latest .
 ## docker push command
-docker push victoryeo00/myprog:latest
+docker push victoryeo00/nodejsprog:latest
 ## docker run command (without detached)
-docker run -u node -p 4002:4002  victoryeo00/myprog:latest
+docker run -u node -p 4002:4002  victoryeo00/nodejsprog:latest
 
 ## deploy and delete k8s
 ```
 kubectl apply -f create-deployment.yaml
-kubectl delete deployment myprog
-kubectl delete svc myprog-service
+kubectl delete deployment nodejsprog
+kubectl delete svc nodejsprog-service
 ```
 ## deploy helm chart
 ```
@@ -52,5 +52,5 @@ helm uninstall <appname>
 ## api key setting
 set in .env file or pass the api key to docker commmand
 ```
-docker run -u node --env API_KEY=testkey -p 4002:4002 victoryeo00/myprog:latest
+docker run -u node --env API_KEY=testkey -p 4002:4002 victoryeo00/nodejsprog:latest
 ```
