@@ -1,4 +1,4 @@
-nodejs platform backend
+Nodejs backend application with MongoDB
 
 ## API
 
