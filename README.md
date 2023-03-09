@@ -15,6 +15,7 @@ Nodejs backend application with MongoDB
 - `npm run start` - Start application
 - `npm run start:dev` - Start application in watch mode
 - `npm run test` - run Jest test runner
+- `npm run test:e2e ` - run end to end test
 
 ## Environment configuration
 
