@@ -21,7 +21,17 @@ export class HealthController {
       toppings: ['cheese', 'peppers'],
     });
     console.log(pizza);
-    
+
+    // keyof operator
+    interface Person {
+      name: string
+      age: number
+      location: string
+    }
+    type NewKeyType = keyof Person
+    let newTypeObject: NewKeyType = "name"
+    console.log(newTypeObject)
+
     return 'healthy';
   }
 }
