@@ -32,6 +32,12 @@ export class HealthController {
     let newTypeObject: NewKeyType = "name"
     console.log(newTypeObject)
 
+    // keyof typeof
+    const cars = { name: "BMW", power: "1000hp" }
+    type CarLiteralType = keyof typeof cars
+    let carLiteralVar: CarLiteralType = "name"
+    console.log(carLiteralVar)
+
     return 'healthy';
   }
 }
